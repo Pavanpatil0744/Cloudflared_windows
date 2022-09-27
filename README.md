@@ -14,3 +14,6 @@ wget https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8
 
 
 npp.8.4.5.Installer.x64.exe /S /v"/qn"
+
+
+https://techexpert.tips/powershell/powershell-copy-files-remote-computers/#:~:text=Tutorial%20Powershell%20-%20Copy%20files%20to%20remote%20computers,a%20file%20to%20the%20remote%20computer%20using%20Powershell.
