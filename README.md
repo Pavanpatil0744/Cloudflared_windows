@@ -17,3 +17,16 @@ npp.8.4.5.Installer.x64.exe /S /v"/qn"
 
 
 https://techexpert.tips/powershell/powershell-copy-files-remote-computers/#:~:text=Tutorial%20Powershell%20-%20Copy%20files%20to%20remote%20computers,a%20file%20to%20the%20remote%20computer%20using%20Powershell.
+
+
+# create warp folder
+mkdir c:\warp
+
+#move to warp folder
+cd c:\warp
+
+#download warp package
+wget 1111-releases.cloudflareclient.com/windows/Cloudflare_WARP_Release-x64.msi
+
+#install warp silently
+msiexec /i c:\warp\Cloudflare_WARP_Release-x64.msi /quiet /qn /norestart /log c:\warp\warp.log PROPERTY1=value1 PROPERTY2=value2
