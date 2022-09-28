@@ -54,3 +54,11 @@ Invoke-WebRequest -Uri $url -OutFile $dest
 $install_args = "/SP- /VERYSILENT /SUPPRESSMSGBOXES /NOCANCEL /NORESTART /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS"
 Start-Process -FilePath "c:\git\Git-2.36.1-64-bit.exe" -ArgumentList $install_args -Wait
 
+
+
+
+cd c:\gi
+
+wget https://github.com/git-for-windows/git/releases/download/v2.36.1.windows.1/Git-2.36.1-64-bit.exe
+
+msiexec /i c:\gi\Git-2.36.1-64-bit.exe /quiet /qn /norestart /log c:\warp\warp.log PROPERTY1=value1 PROPERTY2=value2
