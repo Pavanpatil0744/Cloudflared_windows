@@ -38,3 +38,19 @@ Invoke-Command -ComputerName Server01, Server02 -FilePath c:\Scripts\DiskCollect
 
 
 Copy-Item -Path \\serverb\c$\programs\temp\test.txt -Destination \\servera\c$\programs\temp\test.txt;
+
+
+
+# Source URL
+$url = "https://github.com/git-for-windows/git/releases/download/v2.36.1.windows.1/Git-2.36.1-64-bit.exe"
+
+# Destation file
+$dest = "c:\git\Git-2.36.1-64-bit.exe"
+
+# Download the file
+Invoke-WebRequest -Uri $url -OutFile $dest
+
+#install file
+$install_args = "/SP- /VERYSILENT /SUPPRESSMSGBOXES /NOCANCEL /NORESTART /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS"
+Start-Process -FilePath "c:\git\Git-2.36.1-64-bit.exe" -ArgumentList $install_args -Wait
+
