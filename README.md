@@ -1,5 +1,12 @@
 # Cloudflared_windows
 
+#To install software using powershell script
+Invoke-Command -ComputerName desktop1 -ScriptBlock {powershell.exe c:\Scripts\git.ps1} 
+
+#To install software using batch script
+Invoke-Command -ComputerName desktop1 -ScriptBlock {cmd.exe /c c:\Scripts\test.bat} 
+
+
 Invoke-Command -ComputerName "DESKTOP1" {
         Start-Process "C:\Users\nithi.sundar\Desktop\Test.bat"
         
