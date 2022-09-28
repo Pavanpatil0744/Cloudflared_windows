@@ -32,3 +32,6 @@ wget 1111-releases.cloudflareclient.com/windows/Cloudflare_WARP_Release-x64.msi
 msiexec /i c:\warp\Cloudflare_WARP_Release-x64.msi /quiet /qn /norestart /log c:\warp\warp.log PROPERTY1=value1 PROPERTY2=value2
 
 PsExec.exe \\10.0.27.14 -u DESKTOP1\Vinit -p vinit@8329 cmd Get-Service
+
+
+Copy-Item -Path \\serverb\c$\programs\temp\test.txt -Destination \\servera\c$\programs\temp\test.txt;
