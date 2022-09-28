@@ -33,5 +33,8 @@ msiexec /i c:\warp\Cloudflare_WARP_Release-x64.msi /quiet /qn /norestart /log c:
 
 PsExec.exe \\10.0.27.14 -u DESKTOP1\Vinit -p vinit@8329 cmd Get-Service
 
+Invoke-Command -ComputerName Server01, Server02 -FilePath c:\Scripts\DiskCollect.ps1
+
+
 
 Copy-Item -Path \\serverb\c$\programs\temp\test.txt -Destination \\servera\c$\programs\temp\test.txt;
