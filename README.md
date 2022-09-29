@@ -6,6 +6,8 @@ Invoke-Command -ComputerName desktop1 -ScriptBlock {powershell.exe c:\Scripts\gi
 #To install software using batch script
 Invoke-Command -ComputerName desktop1 -ScriptBlock {cmd.exe /c c:\Scripts\test.bat} 
 
+Invoke-Command -ComputerName desktop1 -ScriptBlock {winget install --accept-source-agreements -e -h --id Git.Git}
+
 
 Invoke-Command -ComputerName "DESKTOP1" {
         Start-Process "C:\Users\nithi.sundar\Desktop\Test.bat"
