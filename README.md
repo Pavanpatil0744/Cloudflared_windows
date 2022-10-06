@@ -1,5 +1,7 @@
 # Cloudflared_windows
 
+https://activedirectorypro.com/how-to-bulk-update-proxyaddresses-attribute/#:~:text=How%20to%20Replace%20ProxyAddresses%20using%20PowerShell%20You%20can,replace%20all%20addresses%20with%20the%20values%20you%20provide.
+
 #To install software using powershell script
 Invoke-Command -ComputerName desktop1 -ScriptBlock {powershell.exe c:\Scripts\git.ps1} 
 
