@@ -63,6 +63,10 @@ Invoke-WebRequest -Uri $url -OutFile $dest
 $install_args = "/SP- /VERYSILENT /SUPPRESSMSGBOXES /NOCANCEL /NORESTART /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS"
 Start-Process -FilePath "c:\git\Git-2.36.1-64-bit.exe" -ArgumentList $install_args -Wait
 
+Import-Module ActiveDirectory
+$User = Get-ADUser ole.roemer -Properties proxyAddresses
+$User.proxyAddresses.Add("smtp:o.roemer@observatory.dk")
+Set-ADUser -instance $User
 
 
 
