@@ -5,7 +5,7 @@ https://activedirectorypro.com/how-to-bulk-update-proxyaddresses-attribute/#:~:t
 #To install software using powershell script
 Invoke-Command -ComputerName desktop1 -ScriptBlock {powershell.exe c:\Scripts\git.ps1} 
 
-#To install software using batch script
+#To install software using batch script follow
 Invoke-Command -ComputerName desktop1 -ScriptBlock {cmd.exe /c c:\Scripts\test.bat} 
 
 Invoke-Command -ComputerName desktop1 -ScriptBlock {winget install --accept-source-agreements -e -h --id Git.Git}
